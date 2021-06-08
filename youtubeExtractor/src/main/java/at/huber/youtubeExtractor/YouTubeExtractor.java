@@ -419,14 +419,14 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
         String endTag = ".m3u8";
         
         String get_video_info = streamMap;
-        System.out.println("DEBUG. GIT. ALL DOC: " + all);
+        System.out.println("DEBUG. GIT. ALL DOC: " + get_video_info);
         
         String hlsUrl = "";
         if(get_video_info.contains("hlsManifestUrl")) {
             hlsUrl = get_video_info.substring(get_video_info.lastIndexOf(startTag) + startTag.length(), get_video_info.lastIndexOf(endTag) + endTag.length());
         }
 
-        System.our.println("DEBUG. GIT. HLS: " + hlsUrl);
+        System.out.println("DEBUG. GIT. HLS: " + hlsUrl);
             
         if (ytFiles.size() == 0) {
             if (LOGGING)
